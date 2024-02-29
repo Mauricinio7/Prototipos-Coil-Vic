@@ -32,6 +32,9 @@ Escribir:    git pull origin main
 -Renombrar nuestra rama:
 Escribir:   git branch -m main
 
+-Para subir a la rama algo por primera vez se escribe:
+        git push --set-upstream origin main
+
 Con esto se debería de vincular la rama y se podría empezar a usar todo
 como se haría normalmente.
 
