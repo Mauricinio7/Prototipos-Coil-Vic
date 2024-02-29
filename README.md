@@ -21,4 +21,21 @@ git pull: Descargar los cambios.
 
 git merge RamaOrigen RamaDestino: Juntos 2 ramas
 
+_____________________________________________________________________________
+########################## Posibles errores #################################
+
+Configurando el repositorio me he dado cuenta que hay un posible error, 
+en algunas ocasiones no permite hacer el primer pull dado que no se ha
+vinculado la rama inicial, para vincularla debemos de:
+-Vincular nuestra rama local con la remota:
+Escribir:    git pull origin main
+-Renombrar nuestra rama:
+Escribir:   git branch -m main
+
+Con esto se debería de vincular la rama y se podría empezar a usar todo
+como se haría normalmente.
+
+##############################################################################
+______________________________________________________________________________
+
 Recordemos de avisar antes de hacer un merge y corregir los posibles problemas que pueda tener. 
