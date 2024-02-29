@@ -9,11 +9,13 @@ git branch: ver ramas
 
 git push -u origin nombrRama: Para subir su rama
 
-git push: Para subir sus cambios.
-
 git add .: para subir a stage los cambios
 
 git commit: Para completar sus cambios.
+
+git fetch: Actualizar para ver si hay cambios.
+
+git push: Para subir sus cambios.
 
 git pull: Descargar los cambios.
 
