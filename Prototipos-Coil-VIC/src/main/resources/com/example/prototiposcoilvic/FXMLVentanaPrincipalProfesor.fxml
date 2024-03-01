@@ -24,17 +24,30 @@
       </ImageView>
       <Pane fx:id="PanelExpandible" layoutY="-1.0" onMouseEntered="#aumentarTamaño" onMouseExited="#restaurarTamaño" prefHeight="500.0" prefWidth="79.0" style="-fx-background-color: #990066;">
          <children>
-            <Button layoutX="5.0" layoutY="26.0" mnemonicParsing="false" onAction="#botonInicio" style="-fx-background-color: TRANSPARENT">
+            <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#botonInicio" style="-fx-background-color: TRANSPARENT">
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@logoPequeñoCoil.png" />
+                        <Image url="@inicioLOGO.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button layoutX="5.0" layoutY="94.0" mnemonicParsing="false" text="Button" onAction="#botonNuevaColaboracion"/>
-            <Button layoutX="5.0" layoutY="141.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="5.0" layoutY="192.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="12.0" layoutY="85.0" mnemonicParsing="false" onAction="#botonNuevaColaboracion" prefHeight="42.0" prefWidth="44.0" style="-fx-background-color: TRANSPARENT">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@nuevaColaboracionLOGO.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="11.0" layoutY="150.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="31.0" style="-fx-background-color: TRANSPARENT">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@miColaboracionLOGO.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
       </Pane>
    </children>
