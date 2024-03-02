@@ -35,6 +35,11 @@ public class FXMLVentanaPrincipalProfesorController {
         PanelExpandible.getChildren().add(label2);
         label2.setStyle("-fx-text-fill: white;");
 
+        Label label3 = new Label("Mi\nColaboracion");
+        label3.setLayoutX(75); // Posición X en el espacio adicional
+        label3.setLayoutY(155); // Posición Y en el espacio adicional
+        PanelExpandible.getChildren().add(label3);
+        label3.setStyle("-fx-text-fill: white;");
     }
 
     @FXML

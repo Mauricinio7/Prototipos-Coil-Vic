@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaPrincipalProfesorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaPrincipalProfesorController">
     <children>
         <Label layoutX="277.0" layoutY="33.0" prefHeight="88.0" prefWidth="291.0" text="COIL-VIC" textFill="#ff3878">
             <font>
@@ -17,18 +18,37 @@
                 <Image url="@logoPequeñoCoil.png" />
             </image>
         </ImageView>
-      <TabPane layoutX="116.0" layoutY="158.0" prefHeight="288.0" prefWidth="530.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="83.0" layoutY="135.0" prefHeight="364.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Registrar Oferta Colaboración">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="155.0" layoutY="47.0" text="Modalidad" />
+                        <Label layoutX="83.0" layoutY="77.0" text="Nombre colaboración" />
+                        <Label layoutX="116.0" layoutY="109.0" text="Objetivo general" />
+                        <Label layoutX="121.0" layoutY="142.0" text="Tema de interés" />
+                        <Label layoutX="86.0" layoutY="174.0" text="Tipo de Colaboración" />
+                        <TextField layoutX="244.0" layoutY="42.0" prefHeight="31.0" prefWidth="268.0" />
+                        <TextField layoutX="244.0" layoutY="74.0" prefHeight="31.0" prefWidth="268.0" />
+                        <TextField layoutX="244.0" layoutY="106.0" prefHeight="31.0" prefWidth="268.0" />
+                        <TextField layoutX="244.0" layoutY="138.0" prefHeight="31.0" prefWidth="268.0" />
+                        <TextField layoutX="244.0" layoutY="170.0" prefHeight="31.0" prefWidth="268.0" />
+                        <Button layoutX="144.0" layoutY="236.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
+                        <Button layoutX="378.0" layoutY="236.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Registrar Colaboración">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
+            <Tab text="Registrar Estudiantes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
         <Pane fx:id="PanelExpandible" layoutY="-1.0" onMouseEntered="#aumentarTamaño" onMouseExited="#restaurarTamaño" prefHeight="500.0" prefWidth="79.0" style="-fx-background-color: #990066;">
