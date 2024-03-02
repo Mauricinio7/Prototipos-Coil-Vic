@@ -50,10 +50,11 @@ public class FXMLVentanaPrincipalProfesorController {
 
         PanelExpandible.getChildren().removeIf(node -> node instanceof Label);
     }
+
     @FXML
-    public void botonInicio(ActionEvent event) {
+    public void botonNuevaColaboracion(ActionEvent event) {
         try {
-            Parent ventanaAnterior = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLVentanaPrincipalProfesor.fxml")));
+            Parent ventanaAnterior = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLVentanaNuevaColabProfesor.fxml")));
             Scene escenaAnterior = new Scene(ventanaAnterior);
             Stage ventanaActual = (Stage) ((Node)event.getSource()).getScene().getWindow();
             ventanaActual.setScene(escenaAnterior);
@@ -64,9 +65,9 @@ public class FXMLVentanaPrincipalProfesorController {
     }
 
     @FXML
-    public void botonNuevaColaboracion(ActionEvent event) {
+    public void botonMiColaboracion(ActionEvent event) {
         try {
-            Parent ventanaAnterior = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLVentanaNuevaColabProfesor.fxml")));
+            Parent ventanaAnterior = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLVentanaMiColabProfesor.fxml")));
             Scene escenaAnterior = new Scene(ventanaAnterior);
             Stage ventanaActual = (Stage) ((Node)event.getSource()).getScene().getWindow();
             ventanaActual.setScene(escenaAnterior);
