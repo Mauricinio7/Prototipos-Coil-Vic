@@ -17,11 +17,30 @@
                 <Image url="@logoPequeñoCoil.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="232.0" fitWidth="410.0" layoutX="214.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@TextoCOIL.png" />
-            </image>
-        </ImageView>
+      <TabPane layoutX="83.0" layoutY="128.0" prefHeight="371.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Registrar Estudiantes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Concluir Colaboracion">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Solicitar Constancias">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Consultar Constancia">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
         <Pane fx:id="PanelExpandible" layoutY="-1.0" onMouseEntered="#aumentarTamaño" onMouseExited="#restaurarTamaño" prefHeight="500.0" prefWidth="79.0" style="-fx-background-color: #990066;">
             <children>
                 <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#botonInicio" style="-fx-background-color: TRANSPARENT">
