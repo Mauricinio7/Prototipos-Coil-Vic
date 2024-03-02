@@ -34,8 +34,8 @@
                         <TextField layoutX="225.0" layoutY="91.0" prefHeight="31.0" prefWidth="235.0" />
                         <TextField layoutX="225.0" layoutY="124.0" prefHeight="31.0" prefWidth="235.0" />
                         <TextField layoutX="225.0" layoutY="157.0" prefHeight="31.0" prefWidth="235.0" />
-                        <Button layoutX="166.0" layoutY="230.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Registrar" />
-                        <Button layoutX="370.0" layoutY="230.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Cancelar" />
+                        <Button layoutX="166.0" layoutY="230.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Registrar" onAction="#botonRegistrar"/>
+                        <Button layoutX="370.0" layoutY="230.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Cancelar" onAction="#botonCancelar"/>
                      </children></AnchorPane>
             </content>
           </Tab>
