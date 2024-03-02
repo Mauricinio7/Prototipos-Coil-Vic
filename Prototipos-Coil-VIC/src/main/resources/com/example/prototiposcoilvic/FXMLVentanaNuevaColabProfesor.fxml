@@ -20,23 +20,32 @@
       <TabPane layoutX="83.0" layoutY="128.0" prefHeight="371.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Registrar Oferta Colaboración">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Label layoutX="164.0" layoutY="48.0" text="Modalidad" />
-                        <Label layoutX="104.0" layoutY="78.0" text="Nombre colaboración" />
-                        <Label layoutX="130.0" layoutY="110.0" text="Objetivo general" />
-                        <Label layoutX="132.0" layoutY="142.0" text="Tema de interés" />
-                        <Label layoutX="102.0" layoutY="174.0" text="Tipo de Colaboración" />
-                        <TextField layoutX="244.0" layoutY="42.0" prefHeight="31.0" prefWidth="268.0" />
-                        <TextField layoutX="244.0" layoutY="74.0" prefHeight="31.0" prefWidth="268.0" />
-                        <TextField layoutX="244.0" layoutY="106.0" prefHeight="31.0" prefWidth="268.0" />
-                        <TextField layoutX="244.0" layoutY="138.0" prefHeight="31.0" prefWidth="268.0" />
-                        <TextField layoutX="244.0" layoutY="170.0" prefHeight="31.0" prefWidth="268.0" />
-                        <Button layoutX="144.0" layoutY="236.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="94.0" text="Aceptar" onAction="#botonAceptar"/>
-                        <Button layoutX="378.0" layoutY="236.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="94.0" text="Cancelar" onAction="#botonCancelar"/>
-                     </children></AnchorPane>
-            </content>
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="489.0" prefWidth="596.0">
+                           <children>
+                              <TextArea layoutX="226.0" layoutY="198.0" prefHeight="74.0" prefWidth="268.0" />
+                              <TextField layoutX="226.0" layoutY="44.0" prefHeight="31.0" prefWidth="268.0" />
+                              <Label layoutX="99.0" layoutY="106.0" prefHeight="27.0" prefWidth="117.0" text="Experiencia educativa" />
+                              <TextField layoutX="226.0" layoutY="74.0" prefHeight="31.0" prefWidth="268.0" />
+                              <Label layoutX="175.0" layoutY="173.0" text="idioma" />
+                              <Button layoutX="419.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
+                              <Button layoutX="133.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
+                              <TextField layoutX="226.0" layoutY="167.0" prefHeight="31.0" prefWidth="268.0" />
+                              <TextField layoutX="226.0" layoutY="105.0" prefHeight="31.0" prefWidth="268.0" />
+                              <TextField layoutX="226.0" layoutY="136.0" prefHeight="31.0" prefWidth="268.0" />
+                              <Label layoutX="99.0" layoutY="142.0" text="Tipo de Colaboración" />
+                              <Label layoutX="126.0" layoutY="284.0" text="Tema de interés" />
+                              <Label layoutX="124.0" layoutY="207.0" text="Objetivo general" />
+                              <Label layoutX="98.0" layoutY="50.0" text="Nombre colaboración" />
+                              <Label layoutX="156.0" layoutY="79.0" text="Modalidad" />
+                              <TextArea layoutX="226.0" layoutY="272.0" prefHeight="74.0" prefWidth="268.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </content>
           </Tab>
           <Tab text="Registrar Colaboración">
             <content>
