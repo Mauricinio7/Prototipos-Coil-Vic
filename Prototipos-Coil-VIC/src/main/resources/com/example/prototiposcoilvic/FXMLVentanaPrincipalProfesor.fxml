@@ -7,12 +7,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaPrincipalProfesorController">
    <children>
-      <Label layoutX="277.0" layoutY="33.0" prefHeight="88.0" prefWidth="291.0" text="COIL-VIC" textFill="#ff3878">
+      <Label layoutX="277.0" layoutY="26.0" prefHeight="88.0" prefWidth="291.0" text="COIL-VIC" textFill="#ff3878">
          <font>
             <Font name="Arial Rounded MT Bold" size="60.0" />
          </font>
       </Label>
-      <ImageView fitHeight="101.0" fitWidth="116.0" layoutX="148.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="101.0" fitWidth="116.0" layoutX="148.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logoPequeñoCoil.png" />
          </image>
