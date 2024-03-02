@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -16,6 +18,20 @@ import java.util.Objects;
 
 public class FXMLVentanaNuevaColabProfesorController {
 
+    @FXML
+    public TextArea textAreaObjetivoGeneral;
+    @FXML
+    public TextArea textAreaTemaInteres;
+    @FXML
+    public TextField textFieldModalidad;
+    @FXML
+    public TextField textFieldIdioma;
+    @FXML
+    public TextField textFieldExperienciaEducativa;
+    @FXML
+    public TextField textFieldTipoColaboracion;
+    @FXML
+    public TextField textFieldNombreColaboracion;
     @FXML
     private Pane PanelExpandible;
 
@@ -42,7 +58,6 @@ public class FXMLVentanaNuevaColabProfesorController {
         PanelExpandible.getChildren().add(label3);
         label3.setStyle("-fx-text-fill: white;");
     }
-
     @FXML
     public void restaurarTamaño() {
         // Restaurar el tamaño original del panel al retirar el mouse
@@ -51,7 +66,6 @@ public class FXMLVentanaNuevaColabProfesorController {
 
         PanelExpandible.getChildren().removeIf(node -> node instanceof Label);
     }
-
     @FXML
     public void botonInicio(ActionEvent event) {
         try {
@@ -76,14 +90,21 @@ public class FXMLVentanaNuevaColabProfesorController {
             e.printStackTrace();
         }
     }
-
     @FXML
     public void botonAceptar(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmacion");
-        alert.setHeaderText(null);
-        alert.setContentText("¿Está seguro que desea confirmar los datos del registro?");
-        alert.showAndWait();
+        if (camposVacios()) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Aviso");
+            alert.setHeaderText(null);
+            alert.setContentText("Faltan campos por llenar");
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmacion");
+            alert.setHeaderText(null);
+            alert.setContentText("¿Está seguro que desea confirmar los datos del registro?");
+            alert.showAndWait();
+        }
     }
 
     @FXML
@@ -93,5 +114,23 @@ public class FXMLVentanaNuevaColabProfesorController {
         alert.setHeaderText(null);
         alert.setContentText("Se reiniciarán los campos\n¿Está seguro que desea cancelar el registro?");
         alert.showAndWait();
+    }
+
+    private boolean camposVacios() {
+
+        TextField[] camposField = {textFieldIdioma, textFieldExperienciaEducativa, textFieldNombreColaboracion, textFieldModalidad, textFieldNombreColaboracion, textFieldTipoColaboracion};
+        TextArea[] camposArea = {textAreaObjetivoGeneral, textAreaTemaInteres};
+
+        for (TextField campoTexto : camposField) {
+            if (campoTexto.getText().isBlank()) {
+                return true;
+            }
+        }
+        for (TextArea campoTexto: camposArea) {
+            if (campoTexto.getText().isBlank()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
