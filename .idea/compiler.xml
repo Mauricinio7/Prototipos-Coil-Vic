@@ -9,8 +9,5 @@
         <module name="Prototipos-Coil-VIC" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Prototipos-Coil-VIC" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

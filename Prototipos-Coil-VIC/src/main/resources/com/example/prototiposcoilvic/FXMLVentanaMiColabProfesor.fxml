@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.ListView?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaMiColabProfesorController">
     <children>
         <Label layoutX="277.0" layoutY="26.0" prefHeight="88.0" prefWidth="291.0" text="COIL-VIC" textFill="#ff3878">
@@ -47,11 +48,59 @@
                      </children></AnchorPane>
             </content>
           </Tab>
-          <Tab text="Concluir Colaboracion">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
+            <Tab text="Concluir Colaboracion">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <ScrollPane prefHeight="349.0" prefWidth="613.0">
+                                <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="557.0" prefWidth="589.0">
+                                        <children>
+                                            <Pane layoutX="63.0" layoutY="83.0" prefHeight="216.0" prefWidth="479.0" style="-fx-background-color: #E0E0E0;">
+                                                <children>
+                                                    <Label layoutX="53.0" layoutY="18.0" text="Colaboración" />
+                                                    <Label layoutX="166.0" layoutY="18.0" text="ISOF-PDD-A" />
+                                                    <Label layoutX="356.0" layoutY="18.0" text="ID" />
+                                                    <Label layoutX="387.0" layoutY="18.0" text="434590" />
+                                                    <Label layoutX="53.0" layoutY="61.0" text="Profesor" />
+                                                    <Label layoutX="166.0" layoutY="61.0" text="Juan Arturo Rivera Tlapa" />
+                                                    <Label layoutX="53.0" layoutY="101.0" text="Profesor externo" />
+                                                    <Label layoutX="166.0" layoutY="101.0" text="Jean Write Smith" />
+                                                    <Label layoutX="53.0" layoutY="142.0" text="País" />
+                                                    <Label layoutX="166.0" layoutY="142.0" text="Alemania" />
+                                                    <ImageView fitHeight="215.0" fitWidth="164.0" layoutX="162.0" layoutY="3.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                            <Image url="@logoUv.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                    <Label layoutX="44.0" layoutY="180.0" text="Fecha inicio" />
+                                                    <Label layoutX="302.0" layoutY="180.0" text="Fecha fin" />
+                                                    <Label layoutX="143.0" layoutY="180.0" text="07-07-24" />
+                                                    <Label layoutX="382.0" layoutY="180.0" text="21-11-24" />
+                                                </children>
+                                            </Pane>
+                                            <Label layoutX="180.0" layoutY="40.0" text="Concluir Colaboración">
+                                                <font>
+                                                    <Font size="23.0" />
+                                                </font>
+                                            </Label>
+                                            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="284.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@iconoDescarga.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label layoutX="242.0" layoutY="371.0" text="Clic para subir reporte" />
+                                            <Label layoutX="41.0" layoutY="371.0" text="Archivos subidos" />
+                                            <ListView layoutX="14.0" layoutY="404.0" prefHeight="101.0" prefWidth="144.0" />
+                                            <Button layoutX="328.0" layoutY="503.0" mnemonicParsing="false" text="Guardar" />
+                                            <Button layoutX="459.0" layoutY="503.0" mnemonicParsing="false" text="Cancelar" />
+                                        </children>
+                                    </AnchorPane>
+                                </content>
+                            </ScrollPane>
+                        </children></AnchorPane>
+                </content>
+            </Tab>
             <Tab text="Solicitar Constancias">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
