@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaCoordinadorController">
+    <children>
+        <Label layoutX="277.0" layoutY="26.0" prefHeight="88.0" prefWidth="291.0" text="COIL-VIC" textFill="#ff3878">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="60.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="101.0" fitWidth="116.0" layoutX="148.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@logoPequeñoCoil.png" />
+            </image>
+        </ImageView>
+        <TabPane layoutX="83.0" layoutY="128.0" prefHeight="371.0" prefWidth="613.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Registrar Estudiantes">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="168.0" layoutY="96.0" text="Correo" />
+                                <Label layoutX="154.0" layoutY="128.0" text="Matrícula" />
+                                <Label layoutX="159.0" layoutY="161.0" text="Nombre" />
+                                <Label layoutX="166.0" layoutY="28.0" text="Datos del Nuevo Estudiante">
+                                    <font>
+                                        <Font size="23.0" />
+                                    </font>
+                                </Label>
+                                <TextField layoutX="225.0" layoutY="91.0" prefHeight="31.0" prefWidth="235.0" />
+                                <TextField layoutX="225.0" layoutY="124.0" prefHeight="31.0" prefWidth="235.0" />
+                                <TextField layoutX="225.0" layoutY="157.0" prefHeight="31.0" prefWidth="235.0" />
+                                <Button layoutX="166.0" layoutY="230.0" mnemonicParsing="false" onAction="#botonRegistrar" prefHeight="31.0" prefWidth="90.0" text="Registrar" />
+                                <Button layoutX="370.0" layoutY="230.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="31.0" prefWidth="90.0" text="Cancelar" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Concluir Colaboracion">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ScrollPane prefHeight="349.0" prefWidth="613.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="557.0" prefWidth="589.0">
+                                            <children>
+                                                <Pane layoutX="63.0" layoutY="83.0" prefHeight="216.0" prefWidth="479.0" style="-fx-background-color: #E0E0E0;">
+                                                    <children>
+                                                        <Label layoutX="53.0" layoutY="18.0" text="Colaboración" />
+                                                        <Label layoutX="166.0" layoutY="18.0" text="ISOF-PDD-A" />
+                                                        <Label layoutX="356.0" layoutY="18.0" text="ID" />
+                                                        <Label layoutX="387.0" layoutY="18.0" text="434590" />
+                                                        <Label layoutX="53.0" layoutY="61.0" text="Profesor" />
+                                                        <Label layoutX="166.0" layoutY="61.0" text="Juan Arturo Rivera Tlapa" />
+                                                        <Label layoutX="53.0" layoutY="101.0" text="Profesor externo" />
+                                                        <Label layoutX="166.0" layoutY="101.0" text="Jean Write Smith" />
+                                                        <Label layoutX="53.0" layoutY="142.0" text="País" />
+                                                        <Label layoutX="166.0" layoutY="142.0" text="Alemania" />
+                                                        <ImageView fitHeight="215.0" fitWidth="164.0" layoutX="162.0" layoutY="3.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@logoUv.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label layoutX="44.0" layoutY="180.0" text="Fecha inicio" />
+                                                        <Label layoutX="302.0" layoutY="180.0" text="Fecha fin" />
+                                                        <Label layoutX="143.0" layoutY="180.0" text="07-07-24" />
+                                                        <Label layoutX="382.0" layoutY="180.0" text="21-11-24" />
+                                                    </children>
+                                                </Pane>
+                                                <Label layoutX="180.0" layoutY="40.0" text="Concluir Colaboración">
+                                                    <font>
+                                                        <Font size="23.0" />
+                                                    </font>
+                                                </Label>
+                                                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="284.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@iconoDescarga.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Label layoutX="242.0" layoutY="371.0" text="Clic para subir reporte" />
+                                                <Label layoutX="41.0" layoutY="371.0" text="Archivos subidos" />
+                                                <ListView layoutX="14.0" layoutY="404.0" prefHeight="101.0" prefWidth="144.0" />
+                                                <Button layoutX="328.0" layoutY="503.0" mnemonicParsing="false" text="Guardar" />
+                                                <Button layoutX="459.0" layoutY="503.0" mnemonicParsing="false" text="Cancelar" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Solicitar Constancias">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab text="Consultar Constancia">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField layoutX="15.0" layoutY="14.0" prefHeight="36.0" prefWidth="317.0" promptText="Buscar por nombre">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font></TextField>
+                                <ComboBox fx:id="cbFiltro" layoutX="429.0" layoutY="14.0" prefHeight="25.0" prefWidth="164.0" />
+                                <Button layoutX="351.0" layoutY="15.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="63.0" text="Buscar" />
+                                <ScrollPane layoutX="8.0" layoutY="59.0" prefHeight="278.0" prefWidth="597.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="521.0" prefWidth="582.0">
+                                            <children>
+                                                <Pane layoutX="20.0" layoutY="14.0" prefHeight="88.0" prefWidth="535.0" style="-fx-background-color: D9D9D9;">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="Mauricio Salas García">
+                                                            <font>
+                                                                <Font size="28.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button layoutX="465.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" text="Ver">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Button layoutX="327.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Descargar">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Label layoutX="22.0" layoutY="55.0" text="Profesor UV">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Pane layoutX="20.0" layoutY="115.0" prefHeight="88.0" prefWidth="535.0" style="-fx-background-color: D9D9D9;">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="305.0" text="Tony Villegas Hurtado">
+                                                            <font>
+                                                                <Font size="28.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button layoutX="465.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" text="Ver">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Button layoutX="327.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Descargar">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Label layoutX="22.0" layoutY="55.0" text="Profesor externo">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Pane layoutX="20.0" layoutY="222.0" prefHeight="88.0" prefWidth="535.0" style="-fx-background-color: D9D9D9;">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="305.0" text="Fidel Montemira Orosco">
+                                                            <font>
+                                                                <Font size="28.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button layoutX="465.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" text="Ver">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Button layoutX="327.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Descargar">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Label layoutX="22.0" layoutY="55.0" text="Estudiante UV">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Pane layoutX="20.0" layoutY="329.0" prefHeight="88.0" prefWidth="535.0" style="-fx-background-color: D9D9D9;">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="305.0" text="Gabriel Armas VIveros">
+                                                            <font>
+                                                                <Font size="28.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button layoutX="465.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="63.0" text="Ver">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Button layoutX="327.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Descargar">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Label layoutX="22.0" layoutY="55.0" text="Estudiante externo">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Pane fx:id="PanelExpandible" layoutY="-1.0" onMouseEntered="#aumentarTamaño" onMouseExited="#restaurarTamaño" prefHeight="500.0" prefWidth="79.0" style="-fx-background-color: #990066;">
+            <children>
+                <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#botonInicio" style="-fx-background-color: TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@inicioLOGO.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="12.0" layoutY="85.0" mnemonicParsing="false" onAction="#botonNuevaColaboracion" prefHeight="42.0" prefWidth="44.0" style="-fx-background-color: TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@nuevaColaboracionLOGO.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="11.0" layoutY="150.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="31.0" style="-fx-background-color: TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@miColaboracionLOGO.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

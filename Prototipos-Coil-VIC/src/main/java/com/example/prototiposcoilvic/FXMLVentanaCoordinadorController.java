@@ -9,19 +9,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.scene.control.ComboBox;
-import javafx.fxml.Initializable;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class FXMLVentanaMiColabProfesorController  implements Initializable{
-
+public class FXMLVentanaCoordinadorController {
     @FXML
     private Pane PanelExpandible;
     @FXML
@@ -102,12 +100,5 @@ public class FXMLVentanaMiColabProfesorController  implements Initializable{
         alert.setHeaderText(null);
         alert.setContentText("Se reiniciarán los campos\n¿Está seguro que desea cancelar el registro?");
         alert.showAndWait();
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        ObservableList<String> list = FXCollections.observableArrayList("Todos", "Profesor UV", "Estudiantes UV", "Profesor Externo", "Estudiantes Externos");
-        cbFiltro.setItems(list);
-        cbFiltro.setValue("Todos");
     }
 }
