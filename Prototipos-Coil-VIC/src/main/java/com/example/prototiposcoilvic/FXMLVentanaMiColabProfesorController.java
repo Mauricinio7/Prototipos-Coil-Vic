@@ -28,6 +28,8 @@ public class FXMLVentanaMiColabProfesorController  implements Initializable{
     private Pane PanelExpandible;
     @FXML
     private ComboBox cbFiltro;
+    @FXML
+    private ComboBox cbFiltro2;
 
     @FXML
     public void aumentarTamaño() {
@@ -110,6 +112,8 @@ public class FXMLVentanaMiColabProfesorController  implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         ObservableList<String> list = FXCollections.observableArrayList("Todos", "Profesor UV", "Estudiantes UV", "Profesor Externo", "Estudiantes Externos");
         cbFiltro.setItems(list);
+        cbFiltro2.setItems(list);
+        cbFiltro.setValue("Todos");
         cbFiltro.setValue("Todos");
     }
 
