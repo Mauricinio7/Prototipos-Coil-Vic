@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -13,7 +14,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.ListView?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaMiColabProfesorController">
     <children>
         <Label layoutX="277.0" layoutY="26.0" prefHeight="88.0" prefWidth="291.0" text="COIL-VIC" textFill="#ff3878">
@@ -84,7 +84,7 @@
                                                     <Font size="23.0" />
                                                 </font>
                                             </Label>
-                                            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="284.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+                                            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="284.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
                                                 <image>
                                                     <Image url="@iconoDescarga.png" />
                                                 </image>
