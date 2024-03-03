@@ -20,19 +20,21 @@ import java.util.ResourceBundle;
 public class FXMLVentanaNuevaColabProfesorController implements Initializable {
 
     @FXML
-    public TextArea textAreaObjetivoGeneral;
+    private ScrollPane scrollPaneRegistrarColaboracion;
     @FXML
-    public TextArea textAreaTemaInteres;
+    private TextArea textAreaObjetivoGeneral;
     @FXML
-    public TextField textFieldModalidad;
+    private TextArea textAreaTemaInteres;
     @FXML
-    public TextField textFieldIdioma;
+    private TextField textFieldModalidad;
     @FXML
-    public TextField textFieldExperienciaEducativa;
+    private TextField textFieldIdioma;
     @FXML
-    public TextField textFieldTipoColaboracion;
+    private TextField textFieldExperienciaEducativa;
     @FXML
-    public TextField textFieldNombreColaboracion;
+    private TextField textFieldTipoColaboracion;
+    @FXML
+    private TextField textFieldNombreColaboracion;
     @FXML
     private Pane PanelExpandible;
     @FXML
@@ -41,6 +43,17 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         comboBoxRegistrarColaboracion.setItems(FXCollections.observableArrayList("Registrar desde cero", "Registrar a partir de la oferta"));
+
+        comboBoxRegistrarColaboracion.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            if (newValue.equals("Registrar desde cero")) {
+                try {
+                    Node node = FXMLLoader.load(getClass().getResource("FXMLNuevaColabDesdeCero.fxml"));
+                    scrollPaneRegistrarColaboracion.setContent(node);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @FXML

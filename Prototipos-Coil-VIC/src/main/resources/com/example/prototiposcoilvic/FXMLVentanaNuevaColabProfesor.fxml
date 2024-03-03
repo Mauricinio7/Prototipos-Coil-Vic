@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaNuevaColabProfesorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLVentanaNuevaColabProfesorController">
     <children>
         <Label layoutX="277.0" layoutY="26.0" prefHeight="88.0" prefWidth="291.0" text="COIL-VIC" textFill="#ff3878">
             <font>
@@ -41,6 +42,7 @@
                               <Label layoutX="98.0" layoutY="50.0" text="Nombre colaboración" />
                               <Label layoutX="156.0" layoutY="79.0" text="Modalidad" />
                               <TextArea fx:id="textAreaTemaInteres" layoutX="226.0" layoutY="272.0" prefHeight="74.0" prefWidth="268.0" />
+                              <Pane layoutX="14.0" layoutY="82.0" prefHeight="200.0" prefWidth="200.0" />
                            </children>
                         </AnchorPane>
                     </content>
@@ -52,6 +54,11 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <ComboBox fx:id="comboBoxRegistrarColaboracion" layoutX="175.0" layoutY="32.0" prefHeight="26.0" prefWidth="263.0" />
+                        <ScrollPane fx:id="scrollPaneRegistrarColaboracion" layoutX="3.0" layoutY="66.0" prefHeight="200.0" prefWidth="607.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                          </content>
+                        </ScrollPane>
                      </children></AnchorPane>
             </content>
           </Tab>
