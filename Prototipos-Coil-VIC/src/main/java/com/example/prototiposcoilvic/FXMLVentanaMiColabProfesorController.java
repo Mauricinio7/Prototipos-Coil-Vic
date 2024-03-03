@@ -1,5 +1,7 @@
 package com.example.prototiposcoilvic;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,14 +12,22 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.scene.control.ComboBox;
+import javafx.fxml.Initializable;
+
+
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class FXMLVentanaMiColabProfesorController {
+public class FXMLVentanaMiColabProfesorController  implements Initializable{
 
     @FXML
     private Pane PanelExpandible;
+    @FXML
+    private ComboBox cbFiltro;
 
     @FXML
     public void aumentarTamaño() {
@@ -95,4 +105,14 @@ public class FXMLVentanaMiColabProfesorController {
         alert.setContentText("Se reiniciarán los campos\n¿Está seguro que desea cancelar el registro?");
         alert.showAndWait();
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        ObservableList<String> list = FXCollections.observableArrayList("Todos", "Profesor UV", "Estudiantes UV", "Profesor Externo", "Estudiantes Externos");
+        cbFiltro.setItems(list);
+        cbFiltro.setValue("Todos");
+    }
+
+
+
 }
