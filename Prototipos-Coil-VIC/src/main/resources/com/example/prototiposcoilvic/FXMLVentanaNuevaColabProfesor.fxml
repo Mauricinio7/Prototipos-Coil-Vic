@@ -54,11 +54,7 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <ComboBox fx:id="comboBoxRegistrarColaboracion" layoutX="175.0" layoutY="32.0" prefHeight="26.0" prefWidth="263.0" />
-                        <ScrollPane fx:id="scrollPaneRegistrarColaboracion" layoutX="3.0" layoutY="66.0" prefHeight="200.0" prefWidth="607.0">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                          </content>
-                        </ScrollPane>
+                        <AnchorPane fx:id="anchorPaneRegistrar" layoutX="14.0" layoutY="66.0" prefHeight="259.0" prefWidth="582.0" />
                      </children></AnchorPane>
             </content>
           </Tab>

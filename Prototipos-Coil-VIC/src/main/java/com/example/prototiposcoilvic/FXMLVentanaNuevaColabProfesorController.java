@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -19,8 +20,9 @@ import java.util.ResourceBundle;
 
 public class FXMLVentanaNuevaColabProfesorController implements Initializable {
 
+
     @FXML
-    private ScrollPane scrollPaneRegistrarColaboracion;
+    private AnchorPane anchorPaneRegistrar;
     @FXML
     private TextArea textAreaObjetivoGeneral;
     @FXML
@@ -48,7 +50,7 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
             if (newValue.equals("Registrar desde cero")) {
                 try {
                     Node node = FXMLLoader.load(getClass().getResource("FXMLNuevaColabDesdeCero.fxml"));
-                    scrollPaneRegistrarColaboracion.setContent(node);
+                    anchorPaneRegistrar.getChildren().setAll(node);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

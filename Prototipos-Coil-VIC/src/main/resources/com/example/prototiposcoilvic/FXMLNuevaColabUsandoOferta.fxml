@@ -3,8 +3,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="568.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="com.example.prototiposcoilvic.FXMLNuevaColabUsandoOfertaController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLNuevaColabUsandoOfertaController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="547.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+       <children>
+         <Label layoutX="211.0" layoutY="113.0" prefHeight="27.0" prefWidth="202.0" text="Experiencia educativa: XXXXX" />
+         <Label layoutX="237.0" layoutY="175.0" prefHeight="18.0" prefWidth="102.0" text="idioma: Esperanto" />
+         <Button layoutX="399.0" layoutY="449.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
+         <Button layoutX="98.0" layoutY="449.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
+         <Label layoutX="209.0" layoutY="147.0" text="Tipo de Colaboración: Espejo " />
+         <Label layoutX="194.0" layoutY="261.0" text="Tema de interés: Plantas trepadoras" />
+         <Label layoutX="161.0" layoutY="233.0" text="Objetivo general: Conocer diversidad de plantas" />
+         <Label layoutX="135.0" layoutY="59.0" text="Nombre colaboración: ISOFT-BP-R-IGNACIO DE LA LLAVE" />
+         <Label layoutX="239.0" layoutY="88.0" text="Modalidad: Virtual" />
+            <Label layoutX="158.0" layoutY="313.0" text="Fecha inicio:" />
+            <Label layoutX="169.0" layoutY="345.0" text="Fecha fin:" />
+            <DatePicker layoutX="242.0" layoutY="308.0" prefHeight="15.0" prefWidth="199.0" />
+            <DatePicker layoutX="242.0" layoutY="340.0" prefHeight="15.0" prefWidth="199.0" />
+            <Label layoutX="243.0" layoutY="204.0" text="Horas totales: 48" />
+            <Label layoutX="170.0" layoutY="377.0" text="Periodo:" />
+            <ComboBox layoutX="242.0" layoutY="372.0" prefWidth="150.0" />
+       </children>
+    </AnchorPane>
   </content>
 </ScrollPane>

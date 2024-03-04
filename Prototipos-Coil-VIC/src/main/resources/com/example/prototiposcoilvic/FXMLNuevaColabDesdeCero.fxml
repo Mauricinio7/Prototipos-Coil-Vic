@@ -3,16 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLNuevaColabDesdeCeroController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLNuevaColabDesdeCeroController">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="532.0" prefWidth="551.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
             <TextArea fx:id="textAreaObjetivoGeneral" layoutX="226.0" layoutY="198.0" prefHeight="74.0" prefWidth="268.0" />
             <TextField fx:id="textFieldNombreColaboracion" layoutX="226.0" layoutY="44.0" prefHeight="31.0" prefWidth="268.0" />
             <Label layoutX="99.0" layoutY="106.0" prefHeight="27.0" prefWidth="117.0" text="Experiencia educativa" />
             <TextField fx:id="textFieldModalidad" layoutX="226.0" layoutY="74.0" prefHeight="31.0" prefWidth="268.0" />
             <Label layoutX="175.0" layoutY="173.0" text="idioma" />
-            <Button layoutX="419.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
-            <Button layoutX="133.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
+            <Button layoutX="372.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
+            <Button layoutX="128.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
             <TextField fx:id="textFieldIdioma" layoutX="226.0" layoutY="167.0" prefHeight="31.0" prefWidth="268.0" />
             <TextField fx:id="textFieldExperienciaEducativa" layoutX="226.0" layoutY="105.0" prefHeight="31.0" prefWidth="268.0" />
             <TextField fx:id="textFieldTipoColaboracion" layoutX="226.0" layoutY="136.0" prefHeight="31.0" prefWidth="268.0" />
