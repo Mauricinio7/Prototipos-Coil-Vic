@@ -1,13 +1,23 @@
 package com.example.prototiposcoilvic;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class FXMLNuevaColabDesdeCeroController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class FXMLNuevaColabDesdeCeroController implements Initializable {
+
+    @FXML
+    public TextField textFieldHoras;
+    @FXML
+    private ComboBox<String> comboBoxPeriodo;
     @FXML
     private TextArea textAreaObjetivoGeneral;
     @FXML
@@ -22,6 +32,11 @@ public class FXMLNuevaColabDesdeCeroController {
     private TextField textFieldTipoColaboracion;
     @FXML
     private TextField textFieldNombreColaboracion;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        comboBoxPeriodo.setItems(FXCollections.observableArrayList("Febrero2024-Julio2024", "Agosto2024-Enero2025"));
+    }
 
     @FXML
     public void botonAceptar(ActionEvent event) {
@@ -64,5 +79,4 @@ public class FXMLNuevaColabDesdeCeroController {
         }
         return false;
     }
-
 }

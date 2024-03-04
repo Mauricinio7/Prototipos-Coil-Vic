@@ -5,23 +5,33 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLNuevaColabDesdeCeroController">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="532.0" prefWidth="551.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
-            <TextArea fx:id="textAreaObjetivoGeneral" layoutX="226.0" layoutY="198.0" prefHeight="74.0" prefWidth="268.0" />
-            <TextField fx:id="textFieldNombreColaboracion" layoutX="226.0" layoutY="44.0" prefHeight="31.0" prefWidth="268.0" />
-            <Label layoutX="99.0" layoutY="106.0" prefHeight="27.0" prefWidth="117.0" text="Experiencia educativa" />
-            <TextField fx:id="textFieldModalidad" layoutX="226.0" layoutY="74.0" prefHeight="31.0" prefWidth="268.0" />
-            <Label layoutX="175.0" layoutY="173.0" text="idioma" />
-            <Button layoutX="372.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
-            <Button layoutX="128.0" layoutY="397.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
-            <TextField fx:id="textFieldIdioma" layoutX="226.0" layoutY="167.0" prefHeight="31.0" prefWidth="268.0" />
-            <TextField fx:id="textFieldExperienciaEducativa" layoutX="226.0" layoutY="105.0" prefHeight="31.0" prefWidth="268.0" />
-            <TextField fx:id="textFieldTipoColaboracion" layoutX="226.0" layoutY="136.0" prefHeight="31.0" prefWidth="268.0" />
-            <Label layoutX="99.0" layoutY="142.0" text="Tipo de Colaboración" />
-            <Label layoutX="126.0" layoutY="284.0" text="Tema de interés" />
-            <Label layoutX="124.0" layoutY="207.0" text="Objetivo general" />
-            <Label layoutX="98.0" layoutY="50.0" text="Nombre colaboración" />
-            <Label layoutX="156.0" layoutY="79.0" text="Modalidad" />
-            <TextArea fx:id="textAreaTemaInteres" layoutX="226.0" layoutY="272.0" prefHeight="74.0" prefWidth="268.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="567.0">
+            <children>
+                <TextField fx:id="textFieldNombreColaboracion" layoutX="226.0" layoutY="44.0" prefHeight="31.0" prefWidth="268.0" />
+                <Label layoutX="99.0" layoutY="106.0" prefHeight="27.0" prefWidth="117.0" text="Experiencia educativa" />
+                <TextField fx:id="textFieldModalidad" layoutX="226.0" layoutY="74.0" prefHeight="31.0" prefWidth="268.0" />
+                <Label layoutX="175.0" layoutY="173.0" text="idioma" />
+                <Button layoutX="400.0" layoutY="529.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
+                <Button layoutX="135.0" layoutY="529.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
+                <TextField fx:id="textFieldExperienciaEducativa" layoutX="226.0" layoutY="105.0" prefHeight="31.0" prefWidth="268.0" />
+                <TextField fx:id="textFieldTipoColaboracion" layoutX="226.0" layoutY="136.0" prefHeight="31.0" prefWidth="268.0" />
+                <TextField fx:id="textFieldIdioma" layoutX="226.0" layoutY="167.0" prefHeight="31.0" prefWidth="268.0" />
+                <Label layoutX="99.0" layoutY="142.0" text="Tipo de Colaboración" />
+                <Label layoutX="126.0" layoutY="284.0" text="Tema de interés" />
+                <Label layoutX="124.0" layoutY="207.0" text="Objetivo general" />
+                <Label layoutX="98.0" layoutY="50.0" text="Nombre colaboración" />
+                <Label layoutX="156.0" layoutY="79.0" text="Modalidad" />
+                <TextArea fx:id="textAreaObjetivoGeneral" layoutX="226.0" layoutY="198.0" prefHeight="74.0" prefWidth="268.0" />
+                <TextArea fx:id="textAreaTemaInteres" layoutX="226.0" layoutY="272.0" prefHeight="74.0" prefWidth="268.0" />
+                <Label layoutX="150.0" layoutY="387.0" prefHeight="21.0" prefWidth="85.0" text="Fecha Inicio" />
+                <Label layoutX="165.0" layoutY="415.0" text="Fecha fin" />
+                <DatePicker layoutX="229.0" layoutY="385.0" />
+                <DatePicker layoutX="229.0" layoutY="409.0" />
+                <Label layoutX="170.0" layoutY="456.0" text="Periodo" />
+                <ComboBox fx:id="comboBoxPeriodo" layoutX="229.0" layoutY="450.0" prefHeight="31.0" prefWidth="150.0" />
+                <TextField fx:id="textFieldHoras" layoutX="226.0" layoutY="346.0" prefHeight="31.0" prefWidth="268.0" />
+                <Label layoutX="148.0" layoutY="351.0" text="Horas totales" />
+            </children>
         </AnchorPane>
     </content>
 </ScrollPane>
