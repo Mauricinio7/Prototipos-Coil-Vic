@@ -45,6 +45,15 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         comboBoxRegistrarColaboracion.setItems(FXCollections.observableArrayList("Registrar desde cero", "Registrar a partir de la oferta"));
+        comboBoxRegistrarColaboracion.setValue("Registrar a partir de la oferta");
+
+        try {
+            Node nodo;
+            nodo = FXMLLoader.load(getClass().getResource("FXMLNuevaColabUsandoOferta.fxml"));
+            anchorPaneRegistrar.getChildren().setAll(nodo);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         comboBoxRegistrarColaboracion.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
             try {
