@@ -21,4 +21,8 @@ public class FXMLNuevaColabUsandoOfertaController {
         alert.setContentText("Se reiniciarán los campos\n¿Está seguro que desea cancelar el registro?");
         alert.showAndWait();
     }
+
+    /**
+     * FALTA MODIFICAR EL botonAceptar CON UN METODO AQUI
+     */
 }
