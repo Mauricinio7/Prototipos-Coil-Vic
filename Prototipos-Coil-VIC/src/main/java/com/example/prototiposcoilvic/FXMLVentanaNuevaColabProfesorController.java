@@ -20,7 +20,6 @@ import java.util.ResourceBundle;
 
 public class FXMLVentanaNuevaColabProfesorController implements Initializable {
 
-
     @FXML
     private AnchorPane anchorPaneRegistrar;
     @FXML
@@ -41,11 +40,14 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
     private Pane PanelExpandible;
     @FXML
     private ComboBox<String> comboBoxRegistrarColaboracion;
+    @FXML
+    private ComboBox<String> comboBoxPeriodo;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         comboBoxRegistrarColaboracion.setItems(FXCollections.observableArrayList("Registrar desde cero", "Registrar a partir de la oferta"));
         comboBoxRegistrarColaboracion.setValue("Registrar a partir de la oferta");
+        comboBoxPeriodo.setItems(FXCollections.observableArrayList("Febrero2024-Julio2024", "Agosto2024-Enero2025"));
 
         try {
             Node nodo;
