@@ -1,11 +1,26 @@
 package com.example.prototiposcoilvic;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 
-public class FXMLNuevaColabUsandoOfertaController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class FXMLNuevaColabUsandoOfertaController implements Initializable {
+
+    @FXML
+    private ComboBox<String> comboBoxPeriodo;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        comboBoxPeriodo.setItems(FXCollections.observableArrayList("Febrero24-Julio24", "Agosto24-Enero25"));
+    }
+
+    @FXML
     public void botonAceptar(ActionEvent event) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmacion");

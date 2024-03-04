@@ -22,7 +22,7 @@
             <DatePicker layoutX="242.0" layoutY="340.0" prefHeight="15.0" prefWidth="199.0" />
             <Label layoutX="243.0" layoutY="204.0" text="Horas totales: 48" />
             <Label layoutX="170.0" layoutY="377.0" text="Periodo:" />
-            <ComboBox layoutX="242.0" layoutY="372.0" prefWidth="150.0" />
+            <ComboBox fx:id="comboBoxPeriodo" layoutX="242.0" layoutY="372.0" prefWidth="150.0" />
        </children>
     </AnchorPane>
   </content>
