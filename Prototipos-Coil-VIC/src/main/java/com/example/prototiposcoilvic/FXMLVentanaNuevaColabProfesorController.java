@@ -47,13 +47,17 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
         comboBoxRegistrarColaboracion.setItems(FXCollections.observableArrayList("Registrar desde cero", "Registrar a partir de la oferta"));
 
         comboBoxRegistrarColaboracion.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
-            if (newValue.equals("Registrar desde cero")) {
-                try {
-                    Node node = FXMLLoader.load(getClass().getResource("FXMLNuevaColabDesdeCero.fxml"));
-                    anchorPaneRegistrar.getChildren().setAll(node);
-                } catch (IOException e) {
-                    e.printStackTrace();
+            try {
+                Node nodo;
+                if (newValue.equals("Registrar desde cero")) {
+                    nodo = FXMLLoader.load(getClass().getResource("FXMLNuevaColabDesdeCero.fxml"));
+                    anchorPaneRegistrar.getChildren().setAll(nodo);
+                } else if (newValue.equals("Registrar a partir de la oferta")) {
+                    nodo = FXMLLoader.load(getClass().getResource("FXMLNuevaColabUsandoOferta.fxml"));
+                    anchorPaneRegistrar.getChildren().setAll(nodo);
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         });
     }
