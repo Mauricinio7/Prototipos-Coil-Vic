@@ -1,104 +1,51 @@
 package com.example.prototiposcoilvic;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
 
 public class FXMLVentanaCoordinadorController {
+
     @FXML
     private Pane PanelExpandible;
-    @FXML
-    private ComboBox cbFiltro;
 
     @FXML
-    public void aumentarTamaño() {
-        // Aumentar el tamaño del panel al pasar el mouse sobre él
-        PanelExpandible.setPrefWidth(170);
-        PanelExpandible.setPrefHeight(500);
-        Label label1 = new Label("Inicio");
-        label1.setLayoutX(75); // Posición X en el espacio adicional
-        label1.setLayoutY(40); // Posición Y en el espacio adicional
-        PanelExpandible.getChildren().add(label1);
-        label1.setStyle("-fx-text-fill: white;");
-
-        Label label2 = new Label("Nueva\nColaboracion");
-        label2.setLayoutX(75); // Posición X en el espacio adicional
-        label2.setLayoutY(90); // Posición Y en el espacio adicional
-        PanelExpandible.getChildren().add(label2);
-        label2.setStyle("-fx-text-fill: white;");
-
-        Label label3 = new Label("Mi\nColaboracion");
-        label3.setLayoutX(75); // Posición X en el espacio adicional
-        label3.setLayoutY(155); // Posición Y en el espacio adicional
-        PanelExpandible.getChildren().add(label3);
-        label3.setStyle("-fx-text-fill: white;");
+    public void initialize() {
+        // Configurar tooltips para los botones
+        for (javafx.scene.Node node : PanelExpandible.getChildren()) {
+            if (node instanceof Button) {
+                Button button = (Button) node;
+                Tooltip tooltip = (Tooltip) button.getTooltip();
+                if (tooltip != null) {
+                    Tooltip.install(button, tooltip);
+                }
+            }
+        }
     }
 
     @FXML
-    public void restaurarTamaño() {
-        // Restaurar el tamaño original del panel al retirar el mouse
+    public void expandirPanel() {
+        // Expandir el panel
+        PanelExpandible.setPrefWidth(150);
+    }
+
+    @FXML
+    public void contraerPanel() {
+        // Contraer el panel
         PanelExpandible.setPrefWidth(79);
-        PanelExpandible.setPrefHeight(500);
+    }
 
-        PanelExpandible.getChildren().removeIf(node -> node instanceof Label);
+    // Métodos de acción para los botones (si los necesitas)
+    @FXML
+    public void botonInicio() {
+        // Acción para el botón de Inicio
     }
 
     @FXML
-    public void botonInicio(ActionEvent event) {
-        try {
-            Parent ventanaAnterior = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLVentanaPrincipalProfesor.fxml")));
-            Scene escenaAnterior = new Scene(ventanaAnterior);
-            Stage ventanaActual = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            ventanaActual.setScene(escenaAnterior);
-            ventanaActual.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void botonNuevaColaboracion() {
+        // Acción para el botón de Nueva Colaboración
     }
 
-    @FXML
-    public void botonNuevaColaboracion(ActionEvent event) {
-        try {
-            Parent ventanaAnterior = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXMLVentanaNuevaColabProfesor.fxml")));
-            Scene escenaAnterior = new Scene(ventanaAnterior);
-            Stage ventanaActual = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            ventanaActual.setScene(escenaAnterior);
-            ventanaActual.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    public void botonRegistrar(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmacion");
-        alert.setHeaderText(null);
-        alert.setContentText("¿Está seguro que desea confirmar los datos del registro?");
-        alert.showAndWait();
-    }
-
-    @FXML
-    public void botonCancelar(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmacion");
-        alert.setHeaderText(null);
-        alert.setContentText("Se reiniciarán los campos\n¿Está seguro que desea cancelar el registro?");
-        alert.showAndWait();
-    }
+    // Otros métodos de acción para los botones
 }
