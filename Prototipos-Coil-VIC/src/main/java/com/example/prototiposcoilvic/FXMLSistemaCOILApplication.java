@@ -21,7 +21,7 @@ public class FXMLSistemaCOILApplication extends Application {
 //        stage.setTitle("Sistema COIL Coordinador");
 //        stage.setScene(scene2);
 //        stage.show();
-    }
+   }
 
     public static void main(String[] args) {
         launch();

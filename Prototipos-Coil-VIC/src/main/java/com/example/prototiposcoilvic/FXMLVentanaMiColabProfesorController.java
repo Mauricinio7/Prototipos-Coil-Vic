@@ -112,6 +112,6 @@ public class FXMLVentanaMiColabProfesorController  implements Initializable{
         cbFiltro.setItems(list);
         cbFiltro2.setItems(list);
         cbFiltro.setValue("Todos");
-        cbFiltro.setValue("Todos");
+        cbFiltro2.setValue("Todos");
     }
 }
