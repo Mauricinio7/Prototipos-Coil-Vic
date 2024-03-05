@@ -21,6 +21,8 @@ import java.util.ResourceBundle;
 public class FXMLVentanaNuevaColabProfesorController implements Initializable {
 
     @FXML
+    private TextField textFieldHoras;
+    @FXML
     private AnchorPane anchorPaneRegistrar;
     @FXML
     private TextArea textAreaObjetivoGeneral;
@@ -136,6 +138,12 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
             alert.setHeaderText(null);
             alert.setContentText("Faltan campos por llenar");
             alert.showAndWait();
+        } else if (!camposErroneos()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Aviso");
+            alert.setHeaderText(null);
+            alert.setContentText("Existen datos erroneos. Verifique por favor");
+            alert.showAndWait();
         } else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmacion");
@@ -154,7 +162,7 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
     }
 
     private boolean camposVacios() {
-        TextField[] camposField = {textFieldIdioma, textFieldExperienciaEducativa, textFieldNombreColaboracion, textFieldModalidad, textFieldNombreColaboracion, textFieldTipoColaboracion};
+        TextField[] camposField = {textFieldIdioma, textFieldExperienciaEducativa, textFieldNombreColaboracion, textFieldModalidad, textFieldNombreColaboracion, textFieldTipoColaboracion, textFieldHoras};
         TextArea[] camposArea = {textAreaObjetivoGeneral, textAreaTemaInteres};
 
         for (TextField campoTexto : camposField) {
@@ -168,5 +176,14 @@ public class FXMLVentanaNuevaColabProfesorController implements Initializable {
             }
         }
         return false;
+    }
+
+    private boolean camposErroneos() {
+        try {
+            Integer.parseInt(textFieldHoras.getText());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }
