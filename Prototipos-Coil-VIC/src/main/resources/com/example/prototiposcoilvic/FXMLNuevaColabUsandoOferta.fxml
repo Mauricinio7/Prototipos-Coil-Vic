@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="582.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prototiposcoilvic.FXMLNuevaColabUsandoOfertaController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="528.0" prefWidth="547.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+       <children>
+         <Label layoutX="211.0" layoutY="113.0" prefHeight="27.0" prefWidth="202.0" text="Experiencia educativa: XXXXX" />
+         <Label layoutX="237.0" layoutY="175.0" prefHeight="18.0" prefWidth="102.0" text="idioma: Esperanto" />
+         <Button layoutX="397.0" layoutY="425.0" mnemonicParsing="false" onAction="#botonCancelar" prefHeight="36.0" prefWidth="94.0" text="Cancelar" />
+         <Button layoutX="100.0" layoutY="425.0" mnemonicParsing="false" onAction="#botonAceptar" prefHeight="36.0" prefWidth="94.0" text="Aceptar" />
+         <Label layoutX="209.0" layoutY="147.0" text="Tipo de Colaboración: Espejo " />
+         <Label layoutX="194.0" layoutY="261.0" text="Tema de interés: Plantas trepadoras" />
+         <Label layoutX="161.0" layoutY="233.0" text="Objetivo general: Conocer diversidad de plantas" />
+         <Label layoutX="135.0" layoutY="59.0" text="Nombre colaboración: ISOFT-BP-R-IGNACIO DE LA LLAVE" />
+         <Label layoutX="239.0" layoutY="88.0" text="Modalidad: Virtual" />
+            <Label layoutX="218.0" layoutY="292.0" text="Fecha inicio: 12/02/2024" />
+            <Label layoutX="231.0" layoutY="323.0" text="Fecha fin: 01/6/2024" />
+            <Label layoutX="243.0" layoutY="204.0" text="Horas totales: 48" />
+            <Label layoutX="199.0" layoutY="353.0" text="Periodo: Febrero2024-Julio-2024" />
+       </children>
+    </AnchorPane>
+  </content>
+</ScrollPane>

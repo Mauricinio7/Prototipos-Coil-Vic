@@ -1,23 +1,79 @@
 package com.example.prototiposcoilvic;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class FXMLVentanaNuevaColabProfesorController {
+public class FXMLVentanaNuevaColabProfesorController implements Initializable {
 
     @FXML
+    private TextField textFieldHoras;
+    @FXML
+    private AnchorPane anchorPaneRegistrar;
+    @FXML
+    private TextArea textAreaObjetivoGeneral;
+    @FXML
+    private TextArea textAreaTemaInteres;
+    @FXML
+    private TextField textFieldModalidad;
+    @FXML
+    private TextField textFieldIdioma;
+    @FXML
+    private TextField textFieldExperienciaEducativa;
+    @FXML
+    private TextField textFieldTipoColaboracion;
+    @FXML
+    private TextField textFieldNombreColaboracion;
+    @FXML
     private Pane PanelExpandible;
+    @FXML
+    private ComboBox<String> comboBoxRegistrarColaboracion;
+    @FXML
+    private ComboBox<String> comboBoxPeriodo;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        comboBoxRegistrarColaboracion.setItems(FXCollections.observableArrayList("Registrar desde cero", "Registrar a partir de la oferta"));
+        comboBoxRegistrarColaboracion.setValue("Registrar a partir de la oferta");
+        comboBoxPeriodo.setItems(FXCollections.observableArrayList("Febrero2024-Julio2024", "Agosto2024-Enero2025"));
+
+        try {
+            Node nodo;
+            nodo = FXMLLoader.load(getClass().getResource("FXMLNuevaColabUsandoOferta.fxml"));
+            anchorPaneRegistrar.getChildren().setAll(nodo);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        comboBoxRegistrarColaboracion.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            try {
+                Node nodo;
+                if (newValue.equals("Registrar desde cero")) {
+                    nodo = FXMLLoader.load(getClass().getResource("FXMLNuevaColabDesdeCero.fxml"));
+                    anchorPaneRegistrar.getChildren().setAll(nodo);
+                } else if (newValue.equals("Registrar a partir de la oferta")) {
+                    nodo = FXMLLoader.load(getClass().getResource("FXMLNuevaColabUsandoOferta.fxml"));
+                    anchorPaneRegistrar.getChildren().setAll(nodo);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
 
     @FXML
     public void aumentarTamaño() {
@@ -42,7 +98,6 @@ public class FXMLVentanaNuevaColabProfesorController {
         PanelExpandible.getChildren().add(label3);
         label3.setStyle("-fx-text-fill: white;");
     }
-
     @FXML
     public void restaurarTamaño() {
         // Restaurar el tamaño original del panel al retirar el mouse
@@ -51,7 +106,6 @@ public class FXMLVentanaNuevaColabProfesorController {
 
         PanelExpandible.getChildren().removeIf(node -> node instanceof Label);
     }
-
     @FXML
     public void botonInicio(ActionEvent event) {
         try {
@@ -76,16 +130,28 @@ public class FXMLVentanaNuevaColabProfesorController {
             e.printStackTrace();
         }
     }
-
     @FXML
     public void botonAceptar(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmacion");
-        alert.setHeaderText(null);
-        alert.setContentText("¿Está seguro que desea confirmar los datos del registro?");
-        alert.showAndWait();
+        if (camposVacios()) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Aviso");
+            alert.setHeaderText(null);
+            alert.setContentText("Faltan campos por llenar");
+            alert.showAndWait();
+        } else if (!camposErroneos()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Aviso");
+            alert.setHeaderText(null);
+            alert.setContentText("Existen datos erroneos. Verifique por favor");
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmacion");
+            alert.setHeaderText(null);
+            alert.setContentText("¿Está seguro que desea confirmar los datos del registro?");
+            alert.showAndWait();
+        }
     }
-
     @FXML
     public void botonCancelar(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -93,5 +159,31 @@ public class FXMLVentanaNuevaColabProfesorController {
         alert.setHeaderText(null);
         alert.setContentText("Se reiniciarán los campos\n¿Está seguro que desea cancelar el registro?");
         alert.showAndWait();
+    }
+
+    private boolean camposVacios() {
+        TextField[] camposField = {textFieldIdioma, textFieldExperienciaEducativa, textFieldNombreColaboracion, textFieldModalidad, textFieldNombreColaboracion, textFieldTipoColaboracion, textFieldHoras};
+        TextArea[] camposArea = {textAreaObjetivoGeneral, textAreaTemaInteres};
+
+        for (TextField campoTexto : camposField) {
+            if (campoTexto.getText().isBlank()) {
+                return true;
+            }
+        }
+        for (TextArea campoTexto: camposArea) {
+            if (campoTexto.getText().isBlank()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean camposErroneos() {
+        try {
+            Integer.parseInt(textFieldHoras.getText());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }
