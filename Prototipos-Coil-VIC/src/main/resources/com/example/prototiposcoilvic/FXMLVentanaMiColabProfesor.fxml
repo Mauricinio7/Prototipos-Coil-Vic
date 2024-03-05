@@ -23,19 +23,10 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="168.0" layoutY="96.0" text="Correo" />
-                        <Label layoutX="154.0" layoutY="128.0" text="Matrícula" />
-                        <Label layoutX="159.0" layoutY="161.0" text="Nombre" />
-                        <Label layoutX="166.0" layoutY="28.0" text="Datos del Nuevo Estudiante">
-                           <font>
-                              <Font size="23.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="225.0" layoutY="91.0" prefHeight="31.0" prefWidth="235.0" />
-                        <TextField layoutX="225.0" layoutY="124.0" prefHeight="31.0" prefWidth="235.0" />
-                        <TextField layoutX="225.0" layoutY="157.0" prefHeight="31.0" prefWidth="235.0" />
-                        <Button layoutX="166.0" layoutY="230.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Registrar" onAction="#botonRegistrar"/>
-                        <Button layoutX="370.0" layoutY="230.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" text="Cancelar" onAction="#botonCancelar"/>
+                        <AnchorPane fx:id="paneCambiable" layoutX="16.0" layoutY="66.0" prefHeight="256.0" prefWidth="584.0">
+                        </AnchorPane>
+                        <TextField layoutX="80.0" layoutY="23.0" prefHeight="31.0" prefWidth="333.0" promptText="busca el nombre del estudiante" />
+                        <ComboBox fx:id="comboBoxRegistrarEstudiante" layoutX="434.0" layoutY="23.0" prefHeight="31.0" prefWidth="155.0" />
                      </children></AnchorPane>
             </content>
           </Tab>
